@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/xillinx_latest/lift_2/lift_2.srcs/sources_1/new/lift_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lift_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/xillinx_latest/lift_2/lift_2.srcs/sim_1/new/tb_lift2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_lift

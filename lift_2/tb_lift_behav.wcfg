@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_lift_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_lift" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="6272fs"></ZoomStartTime>
+      <ZoomEndTime time="16643fs"></ZoomEndTime>
+      <Cursor1Time time="9000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/tb_lift/t_clk" type="logic">
+      <obj_property name="ElementShortName">t_clk</obj_property>
+      <obj_property name="ObjectShortName">t_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_rst" type="logic">
+      <obj_property name="ElementShortName">t_rst</obj_property>
+      <obj_property name="ObjectShortName">t_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_flr1" type="logic">
+      <obj_property name="ElementShortName">t_flr1</obj_property>
+      <obj_property name="ObjectShortName">t_flr1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_flr2" type="logic">
+      <obj_property name="ElementShortName">t_flr2</obj_property>
+      <obj_property name="ObjectShortName">t_flr2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_flr3" type="logic">
+      <obj_property name="ElementShortName">t_flr3</obj_property>
+      <obj_property name="ObjectShortName">t_flr3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_up1" type="logic">
+      <obj_property name="ElementShortName">t_up1</obj_property>
+      <obj_property name="ObjectShortName">t_up1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_up2" type="logic">
+      <obj_property name="ElementShortName">t_up2</obj_property>
+      <obj_property name="ObjectShortName">t_up2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_dw3" type="logic">
+      <obj_property name="ElementShortName">t_dw3</obj_property>
+      <obj_property name="ObjectShortName">t_dw3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_dw2" type="logic">
+      <obj_property name="ElementShortName">t_dw2</obj_property>
+      <obj_property name="ObjectShortName">t_dw2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_rst_count" type="logic">
+      <obj_property name="ElementShortName">t_rst_count</obj_property>
+      <obj_property name="ObjectShortName">t_rst_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_out_count" type="array">
+      <obj_property name="ElementShortName">t_out_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">t_out_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_lift/t_out" type="array">
+      <obj_property name="ElementShortName">t_out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">t_out[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+</wave_config>
