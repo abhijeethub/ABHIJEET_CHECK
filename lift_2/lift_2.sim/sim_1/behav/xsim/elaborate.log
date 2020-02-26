@@ -3,7 +3,6 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: D:/Xilinx_new2/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 2aa3d692a8bf4e8a9b62827534de8136 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_lift_behav xil_defaultlib.tb_lift xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'COUNT_TIMEOUT' [E:/xillinx_latest/lift_2/lift_2.srcs/sim_1/new/tb_lift2.v:30]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

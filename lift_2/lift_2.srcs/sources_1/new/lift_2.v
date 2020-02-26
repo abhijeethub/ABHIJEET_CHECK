@@ -19,20 +19,20 @@
     // 
     //////////////////////////////////////////////////////////////////////////////////
     
-    module lift_2(clk,rst,flr1,flr2,flr3,up1,up2,dw3,dw2,COUNT_TIMEOUT,out_count,out);
+    module lift_2(clk,rst,flr1,flr2,flr3,up1,up2,dw3,dw2,counter_out,out);
        
        input clk,rst,flr1,flr2,flr3,up1,up2,dw3,dw2;
-       output [3:0]COUNT_TIMEOUT;
-       output [3:0]out_count;
+       //output [3:0]COUNT_TIMEOUT;
+       output [3:0]counter_out;
        output [2:0]out;
        
        reg [2:0]state;
        reg [2:0]out;
-       reg [3:0]out_count;
+       reg [3:0]counter_out;
        reg rst_count;
        reg [3:0]COUNT_TIMEOUT;
        initial out = 3'b000;
-       initial out_count = 3'b000;
+       initial counter_out = 3'b000;
        initial COUNT_TIMEOUT = 3'b0011;
      //  integer COUNT_TIMEOUT;
        `define open1 3'b000 // don't use semicolon in define
@@ -48,7 +48,7 @@
       begin
        if(rst)
             begin
-                state <= `open1; //use defined variable with "`" i.e tick
+                state <= `open1; //non-blockng statmnt for sequential and don't mix blocking and non-blocking
                 out <= `open1;
          //        $display("check1");
             end 
@@ -64,15 +64,15 @@
         //$monitor($time ,"check3");
            if(rst_count) // counter start for delay
            begin
-                 out_count <= 0;
+                 counter_out <= 0;
                  rst_count <= 0;
                   state <= `close1;// dleay end,entered into next state i.e close1
                   out <= `close1;
                   end
            else
-                out_count <= out_count + 1;
+                counter_out <= counter_out + 1;
                 
-            if(out_count == COUNT_TIMEOUT)
+            if(counter_out == COUNT_TIMEOUT)
             rst_count <= 1;
             //$display("check");
          //state <= 3'b001;// delay end, entered into next state i.e close1
@@ -126,13 +126,13 @@
        begin
         if(rst_count) // counter start for delay
            begin
-                 out_count <= 0;
+                 counter_out <= 0;
                  rst_count <= 0;
                   state <= `close2;// dleay end,entered into next state i.e close1
                   out <= `close2;
                   end
            else 
-               out_count <= out_count + 1;
+               counter_out <= counter_out + 1;
              
           if(COUNT_TIMEOUT )
               rst_count <= 1;
@@ -151,19 +151,24 @@
                     state <= `open3;
                     out <= `open3;
                 end
+             else if(flr1 || flr2 || up1 || up2 || dw2)
+                begin
+                 state <= `close2;
+                 out <= `close2;
+                end
               end
          
        `open3:
          begin
        if(rst_count) // counter start for delay
            begin
-                 out_count <= 0;
+                 counter_out <= 0;
                  rst_count <= 0;
                   state <= `close3;// dleay end,entered into next state i.e close1
                   out <= `close3;
                   end
            else
-               out_count <= out_count + 1;
+               counter_out <= counter_out + 1;
                
         if(COUNT_TIMEOUT)
          rst_count <= 1;
