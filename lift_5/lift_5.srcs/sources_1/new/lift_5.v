@@ -25,7 +25,7 @@ module lift_5(clk,rst,flr1,flr2,flr3,flr4,flr5,up1,up2,up3,up4,dw5,dw4,dw3,dw2,c
        input clk,rst,flr1,flr2,flr3,flr4,flr5,up1,up2,up3,up4,dw5,dw4,dw3,dw2;
        //output [3:0]COUNT_TIMEOUT;
        output [3:0]counter_out;
-       output [2:0]out;
+       output [3:0]out;
        
        reg [3:0]state;
        reg [3:0]out;
