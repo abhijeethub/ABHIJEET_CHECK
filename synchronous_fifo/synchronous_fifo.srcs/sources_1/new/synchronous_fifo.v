@@ -22,13 +22,13 @@
 
 module synchronous_fifo(clk,reset,read_en,write_en,data_in,data_out,occupancy,empty,full);
 
-parameter data_size = 32;
-parameter depth  = 256;
+parameter DATA_SIZE = 32;
+parameter DEPTH  = 256;
 
 input clk,reset,read_en,write_en;
-input [data_size - 1 : 0]data_in;
-output reg [data_size - 1 : 0]data_out;
-output reg [$clog2(depth) - 1 : 0]occupancy;
+input [DATA_SIZE - 1 : 0]data_in;
+output reg [DATA_SIZE - 1 : 0]data_out;
+output reg [$clog2(DEPTH) - 1 : 0]occupancy;
 output reg empty,full;
 
 
