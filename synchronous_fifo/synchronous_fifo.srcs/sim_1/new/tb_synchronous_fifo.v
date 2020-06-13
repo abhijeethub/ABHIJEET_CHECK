@@ -22,14 +22,21 @@
 
 module tb_synchronous_fifo();
 
-reg tb_clk,tb_reset,tb_read_en,tb_write_en;
-reg [31 : 0]tb_data_in;
+parameter DATA_SIZE = 8;
+parameter DEPTH  = 16; //Keeping depth less to see rollover early
 
-wire [31:0]tb_data_out;
-wire [15:0]tb_occupancy;
+reg tb_clk,tb_reset,tb_read_en,tb_write_en;
+reg [DATA_SIZE-1 : 0]tb_data_in;
+
+wire [DATA_SIZE-1:0]tb_data_out;
+wire [$clog2(DEPTH):0]tb_occupancy;
 wire tb_empty,tb_full; 
 
-synchronous_fifo inst (.clk(tb_clk),.reset(tb_reset),.read_en(tb_read_en),.write_en(tb_write_en),.data_in(tb_data_in),.data_out(tb_data_out),.occupancy(tb_occupancy),.empty(tb_empty),.full(tb_full));
+synchronous_fifo inst (.clk(tb_clk),.reset(tb_reset),
+.read_en(tb_read_en),.write_en(tb_write_en),
+.data_in(tb_data_in),.data_out(tb_data_out),
+.occupancy(tb_occupancy),.empty(tb_empty),
+.full(tb_full));
 
 initial
 begin
@@ -50,6 +57,7 @@ initial
  initial 
    begin
     tb_data_in = 8'hFF;
+    #400 $finish;
    end   
 
 endmodule
