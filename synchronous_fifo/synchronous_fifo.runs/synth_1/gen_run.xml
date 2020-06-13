@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1591837284">
   <File Type="PA-TCL" Name="synchronous_fifo.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="synchronous_fifo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="synchronous_fifo_reports.tcl"/>
   <File Type="RDS-RDS" Name="synchronous_fifo.vds"/>
   <File Type="RDS-UTIL" Name="synchronous_fifo_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="synchronous_fifo_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="synchronous_fifo.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="synchronous_fifo_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="synchronous_fifo_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/synchronous_fifo.v">
@@ -37,9 +34,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
