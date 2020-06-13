@@ -19,5 +19,27 @@ output reg [DATA_SIZE - 1 : 0]data_out;
 output reg [$clog2(DEPTH) - 1 : 0]occupancy; //Great use of clog2
 output reg empty;
 //Test
+initial
+    repeat(10)
+    begin
+        data= random_data;
+        @(posedge clk);
+        write(data);
+    end
+task write(data);
+begin
+    if(tb_full !=0)
+    begin
+        tb_wren = 1'b1; //0ps
+        data = 8'ha4;
+        @(posedge clk);
+        tb_wren = 1'b0; //0ps
+     $display("Write transaction sent");
+     end
+     else:
 
+
+endtask
+
+syncfifo dut_inst(tb_wr);
 endmodule
