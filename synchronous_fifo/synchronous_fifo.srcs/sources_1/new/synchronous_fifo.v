@@ -17,7 +17,7 @@ output reg full;
 //Read clock domain
 input read_en;
 output reg [DATA_SIZE - 1 : 0]data_out;
-output reg [$clog2(DEPTH) : 0]occupancy; //Great use of clog2
+output  [$clog2(DEPTH) : 0]occupancy; //Great use of clog2
 output reg empty;
 
 
@@ -30,12 +30,12 @@ reg [$clog2(DEPTH)-1:0]read_pointer;
 
 assign write_permitted = (write_en && !full) || (write_en && full && read_en);
 assign read_permitted = (read_en && !empty) || (read_en && empty && write_en);
+assign occupancy = DEPTH - write_pointer;
 
-always@(posedge clk,reset)
+always@(posedge clk,posedge reset)
 if (reset)
     begin
         data_out <= 0;
-        occupancy  <= 0;
         empty  <= 0;
         full <= 0;
         write_pointer <=0;
@@ -54,8 +54,6 @@ else
              read_pointer <= read_pointer + 1;
              data_out <= mem[read_pointer];
             end
-         
-        occupancy <= DEPTH - write_pointer;
      
     end 
 

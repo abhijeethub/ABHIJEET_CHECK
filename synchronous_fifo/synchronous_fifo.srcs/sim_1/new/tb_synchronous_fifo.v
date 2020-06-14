@@ -48,15 +48,54 @@ always #5 tb_clk = !tb_clk;
 
 initial
     begin
-        #5 tb_reset = 0;
-        tb_write_en = 1; 
-        tb_read_en  = 1;
-        
+     #20 tb_reset = 0;
+     
+	 repeat (4)
+	 begin
+	   @(posedge tb_clk);
+	   write_fifo($random);
+	 end
+	 #100;
+	 repeat (2)
+	 begin
+	   @(posedge tb_clk);
+	   read_fifo;
+	 end
+	
+   end
+ 
+task write_fifo;
+	input [DATA_SIZE-1:0]data;
+    begin
+        $display("input data is %h",data); 
+        tb_data_in = data;
+        $display("input TB data is %h",tb_data_in);
+        if(tb_full != 1)
+            tb_write_en = 1'b1;
+        @(posedge tb_clk);
+        tb_write_en = 0;
     end
-    
+endtask
+
+task read_fifo;
+    begin
+        $display("input TB data is %h",tb_data_in);
+        if(tb_empty != 1)
+            tb_read_en = 1'b1;
+		else
+			$display("FIFO empty !!!");
+        
+		@(posedge tb_clk);
+        tb_read_en = 0;
+		@(posedge tb_clk);
+		$display("Read value is %h",tb_data_out);
+    end
+endtask 
+ 
+ 
+ 
  initial 
    begin
-    tb_data_in = 8'hFF;
     #400 $finish;
    end   
 

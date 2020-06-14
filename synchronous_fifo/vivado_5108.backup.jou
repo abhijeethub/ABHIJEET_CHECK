@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Jun 13 13:34:58 2020
+# Process ID: 5108
+# Current directory: C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent924 C:\Users\Abhijeet\git\ABHIJEET_CHECK\synchronous_fifo\synchronous_fifo.xpr
+# Log file: C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/vivado.log
+# Journal file: C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_synchronous_fifo.tcl
+run all
+close_sim
+launch_simulation
+source tb_synchronous_fifo.tcl
+close_sim
+launch_simulation
+source tb_synchronous_fifo.tcl
+current_wave_config {Untitled 3}
+add_wave {{/tb_synchronous_fifo/inst/occupancy}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_synchronous_fifo/inst/data_out}} 
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 3}
+add_wave {{/tb_synchronous_fifo/inst/write_permitted}} {{/tb_synchronous_fifo/inst/read_permitted}} {{/tb_synchronous_fifo/inst/write_pointer}} {{/tb_synchronous_fifo/inst/read_pointer}} 
+relaunch_sim
+close_sim
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_synchronous_fifo.tcl
+launch_simulation
+close_sim
+launch_simulation
+source synchronous_fifo.tcl
+update_compile_order -fileset sim_1
+relaunch_sim
+close_sim

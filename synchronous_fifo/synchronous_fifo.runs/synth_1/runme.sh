@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/xillinx_latest/D_flip_flop/synchronous_fifo/synchronous_fifo.runs/synth_1'
+HD_PWD='C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
