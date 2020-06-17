@@ -5,6 +5,7 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.srcs/sources_1/new/synchronous_fifo.v" Line 3. Module synchronous_fifo doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.synchronous_fifo

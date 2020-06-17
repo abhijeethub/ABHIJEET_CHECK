@@ -2,11 +2,12 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Jun 17 11:30:28 2020
-# Process ID: 6972
+# Start of session at: Sun Jun 14 12:39:36 2020
+# Process ID: 4148
 # Current directory: C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.sim/sim_1/behav/xsim/xsim.dir/tb_synchronous_fifo_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/Abhijeet/git/ABHIJEET_CHECK/synchronous_fifo/synchronous_fifo.sim/sim_1/behav/xsim/xsim.dir/tb_synchronous_fifo_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Jun 14 12:39:38 2020...
