@@ -1,0 +1,6 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+output is 1
+Within FINAL block
+
+$finish called at time : 400 ns : File "C:/Users/Abhijeet/git/ABHIJEET_CHECK/SystemVerilog_Learning/SystemVerilog_Learning.srcs/sources_1/imports/system_verilog/experiment.sv" Line 39
